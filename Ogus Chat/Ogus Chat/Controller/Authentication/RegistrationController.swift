@@ -17,6 +17,7 @@ final class RegistrationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.9176470588, blue: 0.9215686275, alpha: 1)
     }
     
     // MARK: - Selectors

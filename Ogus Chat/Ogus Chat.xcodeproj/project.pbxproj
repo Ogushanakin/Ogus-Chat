@@ -16,6 +16,9 @@
 		711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1AD928FED40900738E6B /* ConversationsController.swift */; };
 		711B1ADD28FF445400738E6B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADC28FF445400738E6B /* LoginController.swift */; };
 		711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADE28FF446200738E6B /* RegistrationController.swift */; };
+		71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B128FFE66300164CA8 /* Extensions.swift */; };
+		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
+		71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B528FFFC5000164CA8 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		711B1AD928FED40900738E6B /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		711B1ADC28FF445400738E6B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		711B1ADE28FF446200738E6B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		71DC83B528FFFC5000164CA8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		711B1AD328FED2EA00738E6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				71DC83B128FFE66300164CA8 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -112,6 +119,8 @@
 		711B1AD728FED2F900738E6B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */,
+				71DC83B528FFFC5000164CA8 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,11 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				711B1AC228FED22A00738E6B /* ViewController.swift in Sources */,
+				71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */,
 				711B1ABE28FED22A00738E6B /* AppDelegate.swift in Sources */,
 				711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */,
 				711B1AC028FED22A00738E6B /* SceneDelegate.swift in Sources */,
 				711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */,
 				711B1ADD28FF445400738E6B /* LoginController.swift in Sources */,
+				71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */,
+				71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
