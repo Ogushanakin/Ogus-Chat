@@ -20,6 +20,7 @@
 		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
 		71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B528FFFC5000164CA8 /* CustomTextField.swift */; };
 		71E86E63290012AB008FABF8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E86E62290012AB008FABF8 /* LoginViewModel.swift */; };
+		71E86E6529001946008FABF8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E86E6429001946008FABF8 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		71DC83B528FFFC5000164CA8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		71E86E62290012AB008FABF8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		71E86E6429001946008FABF8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				71E86E62290012AB008FABF8 /* LoginViewModel.swift */,
+				71E86E6429001946008FABF8 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */,
 				711B1ABE28FED22A00738E6B /* AppDelegate.swift in Sources */,
 				711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */,
+				71E86E6529001946008FABF8 /* RegisterViewModel.swift in Sources */,
 				711B1AC028FED22A00738E6B /* SceneDelegate.swift in Sources */,
 				711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */,
 				711B1ADD28FF445400738E6B /* LoginController.swift in Sources */,

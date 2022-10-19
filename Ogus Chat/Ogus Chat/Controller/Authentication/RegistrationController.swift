@@ -11,11 +11,15 @@ final class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
+    private var viewModel = RegisterViewModel()
+    
     private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.tintColor = #colorLiteral(red: 0.1843137255, green: 0.2352941176, blue: 0.4941176471, alpha: 1)
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.imageView?.clipsToBounds = true
+        button.clipsToBounds = true
         return button
     }()
     
@@ -49,7 +53,7 @@ final class RegistrationController: UIViewController {
         return tf
     }()
     
-    private let signUpButton: UIButton = {
+    private lazy var signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.layer.cornerRadius = 5
@@ -57,6 +61,8 @@ final class RegistrationController: UIViewController {
         button.tintColor = #colorLiteral(red: 0.9843137255, green: 0.9176470588, blue: 0.9215686275, alpha: 1)
         button.backgroundColor = #colorLiteral(red: 0.158723802, green: 0.2352941176, blue: 0.4941176471, alpha: 0.656379346)
         button.setHeight(height: 50)
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         return button
     }()
     
@@ -80,16 +86,37 @@ final class RegistrationController: UIViewController {
         super.viewDidLoad()
         
         coonfigureUI()
+        configureNotificationsObservers()
     }
     
     // MARK: - Selectors
     
-    @objc func handleSelectPhoto() {
+    @objc func handleSignup() {
         
+    }
+    
+    @objc func handleSelectPhoto() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @objc func handleShowLogin() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == fullnameTextField {
+            viewModel.fullname = sender.text
+        } else if sender == usernameTextField {
+            viewModel.username = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+            
+            checkFormStatus()
+        }
     }
     
     // MARK: - Helpers
@@ -121,4 +148,36 @@ final class RegistrationController: UIViewController {
                                      right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
     }
     
+    func configureNotificationsObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        plusPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3.0
+        plusPhotoButton.layer.cornerRadius = 200 / 2
+        
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension RegistrationController: AuthenticationControllerProtocol {
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            signUpButton.isEnabled = true
+            signUpButton.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.2352941176, blue: 0.4941176471, alpha: 1)
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.backgroundColor = #colorLiteral(red: 0.158723802, green: 0.2352941176, blue: 0.4941176471, alpha: 0.656379346)
+        }
+    }
 }

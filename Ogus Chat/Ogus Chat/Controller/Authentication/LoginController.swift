@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AuthenticationControllerProtocol {
+    func checkFormStatus()
+}
+
 final class LoginController: UIViewController {
     
     // MARK: - Properties
@@ -16,7 +20,7 @@ final class LoginController: UIViewController {
     private let iconImage: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(systemName: "bubble.right")
-        iv.tintColor = #colorLiteral(red: 0.1843137255, green: 0.2352941176, blue: 0.4941176471, alpha: 1)
+        iv.tintColor = #colorLiteral(red: 0.170517385, green: 0.2371833622, blue: 0.5116912127, alpha: 1)
         return iv
     }()
     
@@ -24,7 +28,7 @@ final class LoginController: UIViewController {
         let label = UILabel()
         label.text = "Ogus Chat"
         label.font = UIFont(name: "Copperplate", size: 25.0)
-        label.textColor = #colorLiteral(red: 0.9843137255, green: 0.9176470588, blue: 0.9215686275, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.9985101819, green: 0.9146988988, blue: 0.9205880761, alpha: 1)
         return label
     }()
     
@@ -104,16 +108,6 @@ final class LoginController: UIViewController {
     
     // MARK: - Helpers
     
-    func checkFormStatus() {
-        if viewModel.formIsValid {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.2352941176, blue: 0.4941176471, alpha: 1)
-        } else {
-            loginButton.isEnabled = false
-            loginButton.backgroundColor = #colorLiteral(red: 0.158723802, green: 0.2352941176, blue: 0.4941176471, alpha: 0.656379346)
-        }
-    }
-    
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
@@ -147,6 +141,19 @@ final class LoginController: UIViewController {
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
    
+}
+
+extension LoginController: AuthenticationControllerProtocol {
+    
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.2352941176, blue: 0.4941176471, alpha: 1)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = #colorLiteral(red: 0.158723802, green: 0.2352941176, blue: 0.4941176471, alpha: 0.656379346)
+        }
+    }
 }
 
 
