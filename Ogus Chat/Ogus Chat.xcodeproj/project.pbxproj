@@ -16,6 +16,7 @@
 		711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1AD928FED40900738E6B /* ConversationsController.swift */; };
 		711B1ADD28FF445400738E6B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADC28FF445400738E6B /* LoginController.swift */; };
 		711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADE28FF446200738E6B /* RegistrationController.swift */; };
+		7120389F2901403800643EC6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120389E2901403800643EC6 /* AuthService.swift */; };
 		716E6220290063A700CBA019 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 716E621F290063A700CBA019 /* GoogleService-Info.plist */; };
 		716E6223290064D300CBA019 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6222290064D300CBA019 /* FirebaseAuth */; };
 		716E6225290064D300CBA019 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6224290064D300CBA019 /* FirebaseFirestore */; };
@@ -41,6 +42,7 @@
 		711B1AD928FED40900738E6B /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		711B1ADC28FF445400738E6B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		711B1ADE28FF446200738E6B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		7120389E2901403800643EC6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		716E621F290063A700CBA019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		711B1AD428FED2EE00738E6B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7120389E2901403800643EC6 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				711B1AC228FED22A00738E6B /* ViewController.swift in Sources */,
 				71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */,
 				711B1ABE28FED22A00738E6B /* AppDelegate.swift in Sources */,
+				7120389F2901403800643EC6 /* AuthService.swift in Sources */,
 				711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */,
 				71E86E6529001946008FABF8 /* RegisterViewModel.swift in Sources */,
 				711B1AC028FED22A00738E6B /* SceneDelegate.swift in Sources */,
