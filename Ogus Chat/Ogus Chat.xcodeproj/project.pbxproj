@@ -16,6 +16,12 @@
 		711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1AD928FED40900738E6B /* ConversationsController.swift */; };
 		711B1ADD28FF445400738E6B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADC28FF445400738E6B /* LoginController.swift */; };
 		711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADE28FF446200738E6B /* RegistrationController.swift */; };
+		716E6220290063A700CBA019 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 716E621F290063A700CBA019 /* GoogleService-Info.plist */; };
+		716E6223290064D300CBA019 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6222290064D300CBA019 /* FirebaseAuth */; };
+		716E6225290064D300CBA019 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6224290064D300CBA019 /* FirebaseFirestore */; };
+		716E6227290064D300CBA019 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6226290064D300CBA019 /* FirebaseStorage */; };
+		716E622A2900650900CBA019 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 716E62292900650900CBA019 /* SDWebImage */; };
+		716E622D2900654A00CBA019 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 716E622C2900654A00CBA019 /* JGProgressHUD */; };
 		71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B128FFE66300164CA8 /* Extensions.swift */; };
 		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
 		71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B528FFFC5000164CA8 /* CustomTextField.swift */; };
@@ -35,6 +41,7 @@
 		711B1AD928FED40900738E6B /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		711B1ADC28FF445400738E6B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		711B1ADE28FF446200738E6B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		716E621F290063A700CBA019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		71DC83B528FFFC5000164CA8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716E6223290064D300CBA019 /* FirebaseAuth in Frameworks */,
+				716E6225290064D300CBA019 /* FirebaseFirestore in Frameworks */,
+				716E622A2900650900CBA019 /* SDWebImage in Frameworks */,
+				716E6227290064D300CBA019 /* FirebaseStorage in Frameworks */,
+				716E622D2900654A00CBA019 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 				711B1AD128FED28D00738E6B /* Main.storyboard */,
 				711B1AC828FED22B00738E6B /* LaunchScreen.storyboard */,
 				711B1ACB28FED22B00738E6B /* Info.plist */,
+				716E621F290063A700CBA019 /* GoogleService-Info.plist */,
 			);
 			path = "Ogus Chat";
 			sourceTree = "<group>";
@@ -163,6 +176,13 @@
 			dependencies = (
 			);
 			name = "Ogus Chat";
+			packageProductDependencies = (
+				716E6222290064D300CBA019 /* FirebaseAuth */,
+				716E6224290064D300CBA019 /* FirebaseFirestore */,
+				716E6226290064D300CBA019 /* FirebaseStorage */,
+				716E62292900650900CBA019 /* SDWebImage */,
+				716E622C2900654A00CBA019 /* JGProgressHUD */,
+			);
 			productName = "Ogus Chat";
 			productReference = 711B1ABA28FED22A00738E6B /* Ogus Chat.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +211,11 @@
 				Base,
 			);
 			mainGroup = 711B1AB128FED22A00738E6B;
+			packageReferences = (
+				716E6221290064D300CBA019 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				716E62282900650900CBA019 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				716E622B2900654A00CBA019 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = 711B1ABB28FED22A00738E6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				711B1AD228FED28D00738E6B /* Main.storyboard in Resources */,
+				716E6220290063A700CBA019 /* GoogleService-Info.plist in Resources */,
 				711B1ACA28FED22B00738E6B /* LaunchScreen.storyboard in Resources */,
 				711B1AC728FED22B00738E6B /* Assets.xcassets in Resources */,
 			);
@@ -438,6 +464,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		716E6221290064D300CBA019 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		716E62282900650900CBA019 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		716E622B2900654A00CBA019 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		716E6222290064D300CBA019 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716E6221290064D300CBA019 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		716E6224290064D300CBA019 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716E6221290064D300CBA019 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		716E6226290064D300CBA019 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716E6221290064D300CBA019 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		716E62292900650900CBA019 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716E62282900650900CBA019 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		716E622C2900654A00CBA019 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716E622B2900654A00CBA019 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 711B1AB228FED22A00738E6B /* Project object */;
 }
