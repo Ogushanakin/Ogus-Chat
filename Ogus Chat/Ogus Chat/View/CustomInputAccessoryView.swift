@@ -17,9 +17,10 @@ final class CustomInputAccessoryView: UIView {
     
     weak var delegate: CustomInputAccessoryViewDelegate?
     
-    lazy var messageInputTextView: UITextView = {
+    private lazy var messageInputTextView: UITextView = {
         let tv = UITextView()
         tv.font = UIFont.systemFont(ofSize: 16)
+        tv.layer.cornerRadius = 8
         tv.isScrollEnabled = false
         return tv
     }()
@@ -87,5 +88,12 @@ final class CustomInputAccessoryView: UIView {
     @objc func handleSendMessage() {
         guard let message = messageInputTextView.text else { return }
         delegate?.inputView(self, wantsToSend: message)
+    }
+    
+    // MARK: - Helpers
+    
+    func clearMessageText() {
+        messageInputTextView.text = nil
+        placeholderLabel.isHidden = false
     }
 }
