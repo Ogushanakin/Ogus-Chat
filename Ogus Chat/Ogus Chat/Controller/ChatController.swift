@@ -7,6 +7,8 @@
 
 import UIKit
 
+private let reuseIdentifier = "MessageCell"
+
 final class ChatController: UICollectionViewController {
     
     // MARK: - Properties
@@ -50,5 +52,29 @@ final class ChatController: UICollectionViewController {
     func configureUI() {
         collectionView.backgroundColor = .white
         configureNavigationBar(withTitle: user.username, prefersLargeTitles: false)
+        
+        collectionView.register(MessageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.alwaysBounceVertical = true
+    }
+}
+
+extension ChatController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MessageCell
+        return cell
+    }
+}
+
+extension ChatController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 16, left: 0, bottom: 16, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
     }
 }
