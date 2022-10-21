@@ -109,7 +109,7 @@ final class RegistrationController: UIViewController {
         
         AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
-                print("DEBUG::: FAİLED")
+                print("DEBUG::: FAİLED\(error.localizedDescription)")
                 self.showLoader(false)
                 return
             }

@@ -24,11 +24,14 @@
 		716E622A2900650900CBA019 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 716E62292900650900CBA019 /* SDWebImage */; };
 		716E622D2900654A00CBA019 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 716E622C2900654A00CBA019 /* JGProgressHUD */; };
 		71864E822901C3BA00EBFD5A /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71864E812901C3BA00EBFD5A /* NewMessageController.swift */; };
+		71D21CC12901D18500117DE0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D21CC02901D18500117DE0 /* UserCell.swift */; };
 		71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B128FFE66300164CA8 /* Extensions.swift */; };
 		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
 		71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B528FFFC5000164CA8 /* CustomTextField.swift */; };
 		71E86E63290012AB008FABF8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E86E62290012AB008FABF8 /* LoginViewModel.swift */; };
 		71E86E6529001946008FABF8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E86E6429001946008FABF8 /* RegisterViewModel.swift */; };
+		71F5D47029028A29003BE3AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5D46F29028A29003BE3AD /* User.swift */; };
+		71F5D47229028A94003BE3AD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5D47129028A94003BE3AD /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +49,14 @@
 		7120389E2901403800643EC6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		716E621F290063A700CBA019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		71864E812901C3BA00EBFD5A /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		71D21CC02901D18500117DE0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		71DC83B528FFFC5000164CA8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		71E86E62290012AB008FABF8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		71E86E6429001946008FABF8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		71F5D46F29028A29003BE3AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71F5D47129028A94003BE3AD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7120389E2901403800643EC6 /* AuthService.swift */,
+				71F5D47129028A94003BE3AD /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 			children = (
 				71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */,
 				71DC83B528FFFC5000164CA8 /* CustomTextField.swift */,
+				71D21CC02901D18500117DE0 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		711B1AD828FED2FB00738E6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71F5D46F29028A29003BE3AD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,7 +273,10 @@
 				7120389F2901403800643EC6 /* AuthService.swift in Sources */,
 				711B1ADA28FED40900738E6B /* ConversationsController.swift in Sources */,
 				71E86E6529001946008FABF8 /* RegisterViewModel.swift in Sources */,
+				71D21CC12901D18500117DE0 /* UserCell.swift in Sources */,
 				711B1AC028FED22A00738E6B /* SceneDelegate.swift in Sources */,
+				71F5D47029028A29003BE3AD /* User.swift in Sources */,
+				71F5D47229028A94003BE3AD /* Service.swift in Sources */,
 				711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */,
 				711B1ADD28FF445400738E6B /* LoginController.swift in Sources */,
 				71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */,
