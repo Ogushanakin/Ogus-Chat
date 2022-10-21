@@ -25,6 +25,7 @@
 		716E622D2900654A00CBA019 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 716E622C2900654A00CBA019 /* JGProgressHUD */; };
 		71864E822901C3BA00EBFD5A /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71864E812901C3BA00EBFD5A /* NewMessageController.swift */; };
 		719F1BFD2902D0E30033FD2A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1BFC2902D0E30033FD2A /* ChatController.swift */; };
+		719F1BFF2902DF160033FD2A /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */; };
 		71D21CC12901D18500117DE0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D21CC02901D18500117DE0 /* UserCell.swift */; };
 		71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B128FFE66300164CA8 /* Extensions.swift */; };
 		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
@@ -51,6 +52,7 @@
 		716E621F290063A700CBA019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		71864E812901C3BA00EBFD5A /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		719F1BFC2902D0E30033FD2A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
 		71D21CC02901D18500117DE0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */,
 				71DC83B528FFFC5000164CA8 /* CustomTextField.swift */,
 				71D21CC02901D18500117DE0 /* UserCell.swift */,
+				719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				71E86E63290012AB008FABF8 /* LoginViewModel.swift in Sources */,
 				71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */,
 				71864E822901C3BA00EBFD5A /* NewMessageController.swift in Sources */,
+				719F1BFF2902DF160033FD2A /* CustomInputAccessoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
