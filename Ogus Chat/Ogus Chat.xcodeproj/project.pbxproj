@@ -27,6 +27,8 @@
 		719F1BFD2902D0E30033FD2A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1BFC2902D0E30033FD2A /* ChatController.swift */; };
 		719F1BFF2902DF160033FD2A /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */; };
 		719F1C012902EF390033FD2A /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1C002902EF390033FD2A /* MessageCell.swift */; };
+		719F1C032902F8E70033FD2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1C022902F8E70033FD2A /* Message.swift */; };
+		719F1C052902FEB50033FD2A /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F1C042902FEB50033FD2A /* MessageViewModel.swift */; };
 		71D21CC12901D18500117DE0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D21CC02901D18500117DE0 /* UserCell.swift */; };
 		71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B128FFE66300164CA8 /* Extensions.swift */; };
 		71DC83B428FFF9DF00164CA8 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */; };
@@ -55,6 +57,8 @@
 		719F1BFC2902D0E30033FD2A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
 		719F1C002902EF390033FD2A /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		719F1C022902F8E70033FD2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		719F1C042902FEB50033FD2A /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		71D21CC02901D18500117DE0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		71DC83B128FFE66300164CA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71DC83B328FFF9DF00164CA8 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			children = (
 				71E86E62290012AB008FABF8 /* LoginViewModel.swift */,
 				71E86E6429001946008FABF8 /* RegisterViewModel.swift */,
+				719F1C042902FEB50033FD2A /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				71F5D46F29028A29003BE3AD /* User.swift */,
+				719F1C022902F8E70033FD2A /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,7 +298,9 @@
 				711B1ADD28FF445400738E6B /* LoginController.swift in Sources */,
 				71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */,
 				71E86E63290012AB008FABF8 /* LoginViewModel.swift in Sources */,
+				719F1C052902FEB50033FD2A /* MessageViewModel.swift in Sources */,
 				71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */,
+				719F1C032902F8E70033FD2A /* Message.swift in Sources */,
 				71864E822901C3BA00EBFD5A /* NewMessageController.swift in Sources */,
 				719F1BFF2902DF160033FD2A /* CustomInputAccessoryView.swift in Sources */,
 			);

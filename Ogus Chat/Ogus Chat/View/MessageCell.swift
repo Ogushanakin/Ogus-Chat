@@ -11,6 +11,13 @@ final class MessageCell: UICollectionViewCell {
     
     // MARK: - Properties
     
+    var message: Message? {
+        didSet { configure() }
+    }
+    
+    var bubbleLeftAnchor: NSLayoutConstraint!
+    var bubbleRightAnchor: NSLayoutConstraint!
+    
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -26,7 +33,6 @@ final class MessageCell: UICollectionViewCell {
         tv.isScrollEnabled = false
         tv.isEditable = false
         tv.textColor = .white
-        tv.text = "Some test message for now..."
         return tv
     }()
     
@@ -49,8 +55,15 @@ final class MessageCell: UICollectionViewCell {
         
         addSubview(bubbleContainer)
         bubbleContainer.layer.cornerRadius = 12
-        bubbleContainer.anchor(top: topAnchor, left: profileImageView.rightAnchor, paddingLeft: 12)
+        bubbleContainer.anchor(top: topAnchor)
         bubbleContainer.widthAnchor.constraint(lessThanOrEqualToConstant: 250).isActive = true
+        
+        bubbleLeftAnchor = bubbleContainer.leftAnchor.constraint(equalTo: profileImageView.rightAnchor,
+                                                                 constant: 12)
+        bubbleLeftAnchor.isActive = false
+        
+        bubbleRightAnchor = bubbleContainer.rightAnchor.constraint(equalTo: rightAnchor, constant: -12)
+        bubbleRightAnchor.isActive = false
         
         bubbleContainer.addSubview(textView)
         textView.anchor(top: bubbleContainer.topAnchor, left: bubbleContainer.leftAnchor,
@@ -62,5 +75,20 @@ final class MessageCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Helpers
+    
+    func configure() {
+        guard let message = message else { return }
+        let viewModel = MessageViewModel(message: message)
+        
+        bubbleContainer.backgroundColor = viewModel.messageBackgroundColor
+        textView.textColor = viewModel.messageTextColor
+        textView.text = message.text
+        
+        bubbleLeftAnchor.isActive = viewModel.leftAnchorActive
+        bubbleRightAnchor.isActive = viewModel.rightAnchorActive
+        
+        profileImageView.isHidden = viewModel.shouldeHideProfileImage
+    }
     
 }
