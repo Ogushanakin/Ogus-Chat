@@ -163,7 +163,7 @@ extension ConversationsController: UITableViewDelegate {
 
 extension ConversationsController: NewMessageControllerDelegate {
     func controller(_ controller: NewMessageController, wantsToStartChatWith user: User) {
-        controller.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         showChatController(forUser: user)
     }
 }
