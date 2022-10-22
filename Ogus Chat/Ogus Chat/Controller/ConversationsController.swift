@@ -16,6 +16,7 @@ final class ConversationsController: UIViewController {
     
     private let tableView = UITableView()
     private var conversations = [Conversation]()
+    private var conversationsDictionary = [String: Conversation]()
     
     private lazy var newMessageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -63,7 +64,11 @@ final class ConversationsController: UIViewController {
     
     func fetchConversations() {
         Service.fetchConversations { conversations in
-            self.conversations = conversations
+            conversations.forEach { conversation in
+                let message = conversation.message
+                self.conversationsDictionary[message.chatPartnerId] = conversation
+            }
+            self.conversations = Array(self.conversationsDictionary.values)
             self.tableView.reloadData()
         }
     }
@@ -71,8 +76,6 @@ final class ConversationsController: UIViewController {
     func authenticateUser() {
         if Auth.auth().currentUser?.uid == nil {
            presentLoginScreen()
-        } else {
-            print("DEBUG:::::")
         }
     }
     
@@ -90,6 +93,7 @@ final class ConversationsController: UIViewController {
     func presentLoginScreen() {
         DispatchQueue.main.async {
             let controller = LoginController()
+            controller.delegate = self
             let nav = UINavigationController(rootViewController: controller)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
@@ -168,9 +172,20 @@ extension ConversationsController: NewMessageControllerDelegate {
     }
 }
 
+// MARK: - ProfileControllerDelegate
 
 extension ConversationsController: ProfileControllerDelegate {
     func handleLogout() {
         logout()
+    }
+}
+
+// MARK: - AuthenticationDelegate
+
+extension ConversationsController: AuthenticationDelegate {
+    func authenticationComplete() {
+        dismiss(animated: true, completion: nil)
+        configureUI()
+        fetchConversations()
     }
 }

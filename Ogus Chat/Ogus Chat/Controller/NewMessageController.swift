@@ -75,7 +75,7 @@ final class NewMessageController: UITableViewController {
         definesPresentationContext = false
         
         if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
-            textField.textColor = .systemPink
+            textField.textColor = #colorLiteral(red: 0.170517385, green: 0.2371833622, blue: 0.5116912127, alpha: 1)
         }
     }
 }
