@@ -2,6 +2,11 @@
 
 ## 🛠 
 
+- MVVM
+- Programmatic-UI
+- Firebase
+- SDWebImage
+
 ## 📸 Screenshoots
 
 ### Log-In Screen
