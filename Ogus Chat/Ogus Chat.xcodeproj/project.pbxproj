@@ -17,6 +17,8 @@
 		711B1ADD28FF445400738E6B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADC28FF445400738E6B /* LoginController.swift */; };
 		711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B1ADE28FF446200738E6B /* RegistrationController.swift */; };
 		7120389F2901403800643EC6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120389E2901403800643EC6 /* AuthService.swift */; };
+		714D2FC72903F05F00D714B4 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D2FC62903F05F00D714B4 /* ConversationCell.swift */; };
+		714D2FC92903F4F400D714B4 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D2FC82903F4F400D714B4 /* ConversationViewModel.swift */; };
 		716E6220290063A700CBA019 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 716E621F290063A700CBA019 /* GoogleService-Info.plist */; };
 		716E6223290064D300CBA019 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6222290064D300CBA019 /* FirebaseAuth */; };
 		716E6225290064D300CBA019 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 716E6224290064D300CBA019 /* FirebaseFirestore */; };
@@ -53,6 +55,8 @@
 		711B1ADC28FF445400738E6B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		711B1ADE28FF446200738E6B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		7120389E2901403800643EC6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		714D2FC62903F05F00D714B4 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		714D2FC82903F4F400D714B4 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		716E621F290063A700CBA019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		71864E812901C3BA00EBFD5A /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		719F1BFC2902D0E30033FD2A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				71E86E62290012AB008FABF8 /* LoginViewModel.swift */,
 				71E86E6429001946008FABF8 /* RegisterViewModel.swift */,
 				719F1C042902FEB50033FD2A /* MessageViewModel.swift */,
+				714D2FC82903F4F400D714B4 /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				71D21CC02901D18500117DE0 /* UserCell.swift */,
 				719F1BFE2902DF160033FD2A /* CustomInputAccessoryView.swift */,
 				719F1C002902EF390033FD2A /* MessageCell.swift */,
+				714D2FC62903F05F00D714B4 /* ConversationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,8 +192,8 @@
 		711B1ADB28FF443600738E6B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				711B1ADC28FF445400738E6B /* LoginController.swift */,
 				711B1ADE28FF446200738E6B /* RegistrationController.swift */,
+				711B1ADC28FF445400738E6B /* LoginController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -298,12 +304,14 @@
 				71F5D47229028A94003BE3AD /* Service.swift in Sources */,
 				719F1C012902EF390033FD2A /* MessageCell.swift in Sources */,
 				711B1ADF28FF446200738E6B /* RegistrationController.swift in Sources */,
+				714D2FC92903F4F400D714B4 /* ConversationViewModel.swift in Sources */,
 				719F1BFD2902D0E30033FD2A /* ChatController.swift in Sources */,
 				711B1ADD28FF445400738E6B /* LoginController.swift in Sources */,
 				71DC83B228FFE66300164CA8 /* Extensions.swift in Sources */,
 				71E86E63290012AB008FABF8 /* LoginViewModel.swift in Sources */,
 				719F1C052902FEB50033FD2A /* MessageViewModel.swift in Sources */,
 				71DC83B628FFFC5000164CA8 /* CustomTextField.swift in Sources */,
+				714D2FC72903F05F00D714B4 /* ConversationCell.swift in Sources */,
 				719F1C032902F8E70033FD2A /* Message.swift in Sources */,
 				71864E822901C3BA00EBFD5A /* NewMessageController.swift in Sources */,
 				719F1BFF2902DF160033FD2A /* CustomInputAccessoryView.swift in Sources */,
